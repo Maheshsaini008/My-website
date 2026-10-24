@@ -1,0 +1,755 @@
+
+<style>
+/* ELIANX DIGITAL PORTFOLIO */
+#elianx-portfolio {
+  --purple: #6c4cff;
+  --cyan: #14c8c8;
+  --ink: #171727;
+  --muted: #686879;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: #ffffff;
+  width: 100%;
+  overflow: hidden;
+  line-height: 1.6;
+}
+#elianx-portfolio * { box-sizing: border-box; }
+#elianx-portfolio a { text-decoration: none; }
+#elianx-portfolio .ep-wrap {
+  width: min(1160px, 92%);
+  margin: auto;
+}
+#elianx-portfolio .ep-nav {
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 20px;
+  padding: 23px 0;
+}
+#elianx-portfolio .ep-logo {
+  font-size: 23px; font-weight: 900;
+  letter-spacing: -1px; color: var(--ink);
+}
+#elianx-portfolio .ep-logo span { color: var(--purple); }
+#elianx-portfolio .ep-links {
+  display: flex; align-items: center; gap: 25px;
+}
+#elianx-portfolio .ep-links a {
+  color: #424252; font-size: 13px; font-weight: 700;
+}
+#elianx-portfolio .ep-links a:hover { color: var(--purple); }
+#elianx-portfolio .ep-btn {
+  display: inline-flex; justify-content: center;
+  align-items: center; gap: 8px;
+  padding: 13px 21px; border-radius: 9px;
+  background: var(--purple); color: white;
+  font-size: 14px; font-weight: 700;
+  transition: .2s ease;
+}
+#elianx-portfolio .ep-btn:hover {
+  background: #5136dc; transform: translateY(-2px);
+}
+#elianx-portfolio .ep-btn-outline {
+  background: white; color: var(--ink);
+  border: 1px solid #deddea;
+}
+#elianx-portfolio .ep-btn-outline:hover {
+  background: #f5f2ff; color: var(--purple);
+}
+#elianx-portfolio .ep-hero {
+  position: relative; padding: 82px 0 88px;
+  background:
+    radial-gradient(ellipse at 88% 20%, #e9e3ff 0, transparent 36%),
+    radial-gradient(ellipse at 8% 95%, #e0ffff 0, transparent 30%),
+    #fbfaff;
+}
+#elianx-portfolio .ep-hero-grid {
+  display: grid; grid-template-columns: 1.15fr .85fr;
+  align-items: center; gap: 55px;
+}
+#elianx-portfolio .ep-label {
+  display: inline-block; padding: 7px 13px;
+  border: 1px solid #e2dcff; border-radius: 30px;
+  background: #f1edff; color: #5a40d7;
+  font-size: 12px; font-weight: 800;
+  letter-spacing: 1px; text-transform: uppercase;
+}
+#elianx-portfolio h1 {
+  font-size: clamp(39px, 5.2vw, 66px);
+  line-height: 1.1; letter-spacing: -2.5px;
+  margin: 22px 0; font-weight: 900;
+}
+#elianx-portfolio .ep-gradient {
+  background: linear-gradient(100deg, #6c4cff, #11aaaa);
+  -webkit-background-clip: text;
+  background-clip: text; color: transparent;
+}
+#elianx-portfolio .ep-lead {
+  color: var(--muted); font-size: 16px;
+  line-height: 1.9; max-width: 540px;
+  margin: 0 0 27px;
+}
+#elianx-portfolio .ep-actions {
+  display: flex; flex-wrap: wrap; gap: 12px;
+}
+#elianx-portfolio .ep-hero-art {
+  min-height: 360px; display: flex;
+  justify-content: center; align-items: center;
+  position: relative;
+}
+#elianx-portfolio .ep-art-card {
+  width: 100%; max-width: 400px;
+  padding: 27px; border-radius: 25px;
+  background: rgba(255,255,255,.88);
+  border: 1px solid #e8e4f5;
+  box-shadow: 0 25px 70px #5540a51b;
+  transform: rotate(2deg);
+}
+#elianx-portfolio .ep-art-top {
+  display: flex; justify-content: space-between;
+  align-items: center; margin-bottom: 22px;
+}
+#elianx-portfolio .ep-dots { display: flex; gap: 5px; }
+#elianx-portfolio .ep-dots i {
+  width: 8px; height: 8px; display: block;
+  border-radius: 50%; background: #d4d0e3;
+}
+#elianx-portfolio .ep-live {
+  font-size: 10px; color: #128a73; font-weight: 800;
+}
+#elianx-portfolio .ep-art-title {
+  font-size: 24px; font-weight: 900;
+  line-height: 1.25; margin-bottom: 9px;
+}
+#elianx-portfolio .ep-art-sub {
+  color: var(--muted); font-size: 12px;
+}
+#elianx-portfolio .ep-mini-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 12px; margin-top: 25px;
+}
+#elianx-portfolio .ep-mini {
+  background: #f6f4ff; padding: 17px 13px;
+  border-radius: 13px; border: 1px solid #eeebff;
+}
+#elianx-portfolio .ep-mini:nth-child(2),
+#elianx-portfolio .ep-mini:nth-child(3) { background: #effcfc; }
+#elianx-portfolio .ep-mini-icon {
+  font-size: 23px; margin-bottom: 5px;
+}
+#elianx-portfolio .ep-mini strong {
+  display: block; font-size: 13px;
+}
+#elianx-portfolio .ep-mini small {
+  color: var(--muted); font-size: 11px;
+}
+#elianx-portfolio .ep-section { padding: 82px 0; }
+#elianx-portfolio .ep-soft { background: #f8f8fc; }
+#elianx-portfolio .ep-heading {
+  max-width: 690px; margin: 0 auto 43px;
+  text-align: center;
+}
+#elianx-portfolio .ep-heading h2,
+#elianx-portfolio .ep-about h2,
+#elianx-portfolio .ep-contact h2 {
+  font-size: clamp(29px, 4vw, 43px);
+  line-height: 1.2; letter-spacing: -1.3px;
+  font-weight: 900; margin: 14px 0;
+}
+#elianx-portfolio .ep-heading p,
+#elianx-portfolio .ep-about p {
+  color: var(--muted); font-size: 15px;
+  line-height: 1.9; margin: 0;
+}
+#elianx-portfolio .ep-cards {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 17px;
+}
+#elianx-portfolio .ep-skill {
+  padding: 25px 20px; border: 1px solid #eae8f2;
+  border-radius: 17px; background: white;
+  transition: .25s ease;
+}
+#elianx-portfolio .ep-skill:hover {
+  transform: translateY(-6px);
+  border-color: #c9bfff;
+  box-shadow: 0 15px 35px #3e287b0e;
+}
+#elianx-portfolio .ep-icon {
+  width: 52px; height: 52px;
+  display: grid; place-items: center;
+  border-radius: 14px; background: #f0ebff;
+  font-size: 25px; margin-bottom: 20px;
+}
+#elianx-portfolio .ep-skill:nth-child(2) .ep-icon,
+#elianx-portfolio .ep-skill:nth-child(4) .ep-icon {
+  background: #e4fafa;
+}
+#elianx-portfolio .ep-skill h3 {
+  font-size: 18px; margin: 0 0 11px;
+  font-weight: 800; line-height: 1.35;
+}
+#elianx-portfolio .ep-skill p {
+  font-size: 13px; color: var(--muted);
+  line-height: 1.8; margin: 0 0 16px;
+}
+#elianx-portfolio .ep-skill ul {
+  list-style: none; padding: 0; margin: 0;
+}
+#elianx-portfolio .ep-skill li {
+  font-size: 12px; color: #49495a;
+  margin-top: 8px;
+}
+#elianx-portfolio .ep-skill li:before {
+  content: "✓"; color: var(--purple);
+  font-weight: 900; margin-right: 8px;
+}
+#elianx-portfolio .ep-projects {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+#elianx-portfolio .ep-project {
+  border: 1px solid #eae8f2; border-radius: 17px;
+  overflow: hidden; background: white;
+  transition: .25s ease;
+}
+#elianx-portfolio .ep-project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px #30245d12;
+}
+#elianx-portfolio .ep-project-art {
+  min-height: 205px; padding: 22px;
+  display: flex; align-items: center; justify-content: center;
+}
+#elianx-portfolio .ep-project-art.website {
+  background: linear-gradient(135deg, #e7e0ff, #d9fafa);
+}
+#elianx-portfolio .ep-project-art.ads {
+  background: linear-gradient(135deg, #fff0e4, #ffe0ef);
+}
+#elianx-portfolio .ep-project-art.design {
+  background: linear-gradient(135deg, #dff7ec, #e5e2ff);
+}
+#elianx-portfolio .ep-mock {
+  width: 100%; max-width: 300px; background: white;
+  border-radius: 10px; padding: 15px;
+  box-shadow: 0 10px 30px #2b1d4815;
+}
+#elianx-portfolio .ep-mock-bar {
+  display: flex; justify-content: space-between;
+  font-size: 9px; font-weight: 900; margin-bottom: 12px;
+}
+#elianx-portfolio .ep-mock-hero {
+  padding: 16px 12px; border-radius: 7px;
+  background: #f1edff;
+}
+#elianx-portfolio .ep-mock-hero strong {
+  font-size: 15px; line-height: 1.3;
+  display: block; margin-bottom: 7px;
+}
+#elianx-portfolio .ep-mock-hero small {
+  font-size: 9px; color: #666;
+}
+#elianx-portfolio .ep-mock-btn {
+  display: inline-block; margin-top: 9px;
+  background: var(--purple); color: white;
+  padding: 5px 9px; border-radius: 4px;
+  font-size: 8px;
+}
+#elianx-portfolio .ep-ad-mock {
+  width: 100%; max-width: 270px;
+  padding: 18px; border-radius: 12px;
+  background: white; box-shadow: 0 10px 30px #2b1d4815;
+}
+#elianx-portfolio .ep-ad-mock small {
+  color: #777; font-size: 9px;
+}
+#elianx-portfolio .ep-ad-mock strong {
+  display: block; font-size: 20px;
+  line-height: 1.2; margin: 10px 0;
+}
+#elianx-portfolio .ep-ad-mock .ep-ad-btn {
+  background: #f4eaff; padding: 7px;
+  color: #5a35c9; font-size: 10px;
+  border-radius: 5px; text-align: center;
+}
+#elianx-portfolio .ep-design-mock {
+  width: 100%; max-width: 270px;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 9px; transform: rotate(-3deg);
+}
+#elianx-portfolio .ep-design-tile {
+  min-height: 90px; border-radius: 11px;
+  padding: 12px; background: #6c4cff; color: white;
+  display: flex; align-items: flex-end;
+  font-size: 12px; font-weight: 900;
+}
+#elianx-portfolio .ep-design-tile:nth-child(2) {
+  background: #14bebe; color: #122c39;
+}
+#elianx-portfolio .ep-design-tile:nth-child(3) {
+  background: #fff; color: #171727;
+}
+#elianx-portfolio .ep-design-tile:nth-child(4) {
+  background: #171727; color: white;
+}
+#elianx-portfolio .ep-project-body { padding: 22px; }
+#elianx-portfolio .ep-tag {
+  display: inline-block; font-size: 10px;
+  font-weight: 800; color: #6046dc;
+  background: #f0ecff; border-radius: 20px;
+  padding: 5px 9px; margin-bottom: 10px;
+}
+#elianx-portfolio .ep-project h3 {
+  font-size: 18px; margin: 0 0 8px;
+}
+#elianx-portfolio .ep-project p {
+  color: var(--muted); font-size: 13px;
+  line-height: 1.8; margin: 0;
+}
+#elianx-portfolio .ep-note {
+  margin-top: 24px; text-align: center;
+  font-size: 12px; color: var(--muted);
+}
+#elianx-portfolio .ep-about-grid {
+  display: grid; grid-template-columns: .85fr 1.15fr;
+  align-items: center; gap: 55px;
+}
+#elianx-portfolio .ep-about-art {
+  background: linear-gradient(145deg, #eee9ff, #e1fbf9);
+  padding: 32px; border-radius: 24px;
+}
+#elianx-portfolio .ep-about-card {
+  padding: 30px; border-radius: 17px;
+  background: white; box-shadow: 0 15px 40px #342a6410;
+}
+#elianx-portfolio .ep-about-mark {
+  font-size: 35px; font-weight: 900;
+  color: var(--purple); letter-spacing: -2px;
+}
+#elianx-portfolio .ep-about-card h3 {
+  font-size: 22px; line-height: 1.35;
+  margin: 12px 0;
+}
+#elianx-portfolio .ep-about-card p {
+  color: var(--muted); font-size: 13px;
+}
+#elianx-portfolio .ep-checks {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 12px; margin: 23px 0 27px;
+}
+#elianx-portfolio .ep-check {
+  background: #f7f5ff; border-radius: 9px;
+  padding: 12px; font-size: 12px; font-weight: 700;
+}
+#elianx-portfolio .ep-contact {
+  padding: 75px 0; text-align: center;
+  color: white;
+  background: linear-gradient(120deg, #211943, #4130a0 65%, #087f88);
+}
+#elianx-portfolio .ep-contact .ep-label {
+  color: #e4ddff; background: #ffffff16;
+  border-color: #ffffff36;
+}
+#elianx-portfolio .ep-contact h2 {
+  max-width: 700px; margin: 18px auto;
+}
+#elianx-portfolio .ep-contact p {
+  max-width: 590px; margin: 0 auto 25px;
+  color: #e3def6; font-size: 14px;
+}
+#elianx-portfolio .ep-contact .ep-btn {
+  background: white; color: #37277d;
+}
+#elianx-portfolio .ep-contact .ep-btn:hover {
+  background: #f0edff;
+}
+#elianx-portfolio .ep-contact-info {
+  display: flex; justify-content: center;
+  flex-wrap: wrap; gap: 25px;
+  margin-top: 28px; color: #f1edff;
+  font-size: 13px;
+}
+#elianx-portfolio .ep-footer {
+  background: #171727; color: #d9d6e8;
+  padding: 24px 0;
+}
+#elianx-portfolio .ep-footer-inner {
+  display: flex; justify-content: space-between;
+  gap: 15px; align-items: center;
+  flex-wrap: wrap;
+}
+#elianx-portfolio .ep-footer small {
+  font-size: 12px; color: #aaa6bd;
+}
+#elianx-portfolio .ep-footer .ep-logo { color: white; }
+#elianx-portfolio .ep-footer .ep-logo span { color: #a89aff; }
+
+@media (max-width: 850px) {
+  #elianx-portfolio .ep-links { gap: 12px; }
+  #elianx-portfolio .ep-links a { font-size: 11px; }
+  #elianx-portfolio .ep-hero-grid { gap: 25px; }
+  #elianx-portfolio .ep-cards { grid-template-columns: 1fr 1fr; }
+  #elianx-portfolio .ep-projects { grid-template-columns: 1fr 1fr; }
+  #elianx-portfolio .ep-project:last-child { grid-column: 1 / -1; }
+  #elianx-portfolio .ep-about-grid { gap: 28px; }
+}
+@media (max-width: 580px) {
+  #elianx-portfolio .ep-nav {
+    align-items: flex-start; flex-direction: column;
+    padding: 19px 0; gap: 13px;
+  }
+  #elianx-portfolio .ep-links {
+    width: 100%; flex-wrap: wrap; gap: 10px 17px;
+  }
+  #elianx-portfolio .ep-links a { font-size: 12px; }
+  #elianx-portfolio .ep-hero { padding: 52px 0; }
+  #elianx-portfolio .ep-hero-grid {
+    grid-template-columns: 1fr; gap: 22px;
+  }
+  #elianx-portfolio h1 {
+    font-size: 42px; letter-spacing: -1.8px;
+  }
+  #elianx-portfolio .ep-lead { font-size: 14px; }
+  #elianx-portfolio .ep-hero-art { min-height: 290px; }
+  #elianx-portfolio .ep-art-card { padding: 22px; }
+  #elianx-portfolio .ep-section { padding: 57px 0; }
+  #elianx-portfolio .ep-cards { gap: 11px; }
+  #elianx-portfolio .ep-skill { padding: 17px 13px; }
+  #elianx-portfolio .ep-skill h3 { font-size: 16px; }
+  #elianx-portfolio .ep-skill p { font-size: 12px; }
+  #elianx-portfolio .ep-projects { grid-template-columns: 1fr; }
+  #elianx-portfolio .ep-project:last-child { grid-column: auto; }
+  #elianx-portfolio .ep-about-grid { grid-template-columns: 1fr; }
+  #elianx-portfolio .ep-about-art { padding: 19px; }
+  #elianx-portfolio .ep-about-card { padding: 23px; }
+  #elianx-portfolio .ep-checks { grid-template-columns: 1fr 1fr; }
+  #elianx-portfolio .ep-contact { padding: 55px 0; }
+  #elianx-portfolio .ep-contact-info {
+    flex-direction: column; gap: 10px;
+  }
+  #elianx-portfolio .ep-footer-inner {
+    flex-direction: column; align-items: flex-start;
+  }
+}
+</style>
+
+<div id="elianx-portfolio">
+
+  <!-- NAVIGATION -->
+  <div class="ep-wrap">
+    <nav class="ep-nav">
+      <a href="#ep-home" class="ep-logo">ElianX<span>.</span> Digital</a>
+      <div class="ep-links">
+        <a href="#ep-home">Home</a>
+        <a href="#ep-services">Skills</a>
+        <a href="#ep-projects">Portfolio</a>
+        <a href="#ep-about">About</a>
+        <a href="#ep-contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="ep-hero" id="ep-home">
+    <div class="ep-wrap ep-hero-grid">
+      <div>
+        <span class="ep-label">Digital Services & Creative Solutions</span>
+        <h1>
+          Turning Ideas Into
+          <span class="ep-gradient">Digital Success.</span>
+        </h1>
+        <p class="ep-lead">
+          Hi, welcome to ElianX Digital! I help businesses build a
+          strong online presence through professional websites,
+          strategic advertising campaigns and creative graphic design.
+          Let's turn your ideas into something impactful.
+        </p>
+        <div class="ep-actions">
+          <a href="#ep-projects" class="ep-btn">Explore My Work ↗</a>
+          <a href="#ep-contact" class="ep-btn ep-btn-outline">Let's Connect</a>
+        </div>
+      </div>
+
+      <div class="ep-hero-art">
+        <div class="ep-art-card">
+          <div class="ep-art-top">
+            <div class="ep-dots"><i></i><i></i><i></i></div>
+            <span class="ep-live">● DIGITAL STUDIO</span>
+          </div>
+          <div class="ep-art-title">
+            Your Business.<br>
+            Your Vision.<br>
+            <span class="ep-gradient">Our Digital Skills.</span>
+          </div>
+          <div class="ep-art-sub">
+            Creative design meets smart digital strategy.
+          </div>
+          <div class="ep-mini-grid">
+            <div class="ep-mini">
+              <div class="ep-mini-icon">💻</div>
+              <strong>Web Development</strong>
+              <small>Web experiences</small>
+            </div>
+            <div class="ep-mini">
+              <div class="ep-mini-icon">📈</div>
+              <strong>Meta Ads</strong>
+              <small>Paid campaigns</small>
+            </div>
+            <div class="ep-mini">
+              <div class="ep-mini-icon">🔎</div>
+              <strong>Google Ads</strong>
+              <small>Search advertising</small>
+            </div>
+            <div class="ep-mini">
+              <div class="ep-mini-icon">🎨</div>
+              <strong>Graphic Design</strong>
+              <small>Visual creativity</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section class="ep-section" id="ep-services">
+    <div class="ep-wrap">
+      <div class="ep-heading">
+        <span class="ep-label">What I Do</span>
+        <h2>My Skills & <span class="ep-gradient">Expertise</span></h2>
+        <p>
+          A combination of technology, marketing and creativity
+          to help businesses grow in the digital world.
+        </p>
+      </div>
+
+      <div class="ep-cards">
+        <article class="ep-skill">
+          <div class="ep-icon">💻</div>
+          <h3>Web Development</h3>
+          <p>
+            Modern, responsive and user-friendly websites
+            designed to showcase your business professionally.
+          </p>
+          <ul>
+            <li>Business websites</li>
+            <li>WordPress websites</li>
+            <li>Responsive page design</li>
+            <li>Landing pages</li>
+          </ul>
+        </article>
+
+        <article class="ep-skill">
+          <div class="ep-icon">📊</div>
+          <h3>Meta Ads</h3>
+          <p>
+            Facebook and Instagram advertising focused on
+            reaching relevant audiences and generating leads.
+          </p>
+          <ul>
+            <li>Campaign setup</li>
+            <li>Audience targeting</li>
+            <li>Lead generation ads</li>
+            <li>Performance monitoring</li>
+          </ul>
+        </article>
+
+        <article class="ep-skill">
+          <div class="ep-icon">🔍</div>
+          <h3>Google Ads</h3>
+          <p>
+            Paid advertising strategies that help businesses
+            connect with people searching for their services.
+          </p>
+          <ul>
+            <li>Search campaigns</li>
+            <li>Keyword research</li>
+            <li>Ad copy creation</li>
+            <li>Campaign optimization</li>
+          </ul>
+        </article>
+
+        <article class="ep-skill">
+          <div class="ep-icon">🎨</div>
+          <h3>Graphic Design</h3>
+          <p>
+            Attractive visual content that communicates your
+            brand message and captures audience attention.
+          </p>
+          <ul>
+            <li>Social media creatives</li>
+            <li>Ad banners</li>
+            <li>Promotional posts</li>
+            <li>Marketing graphics</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO PROJECTS -->
+  <section class="ep-section ep-soft" id="ep-projects">
+    <div class="ep-wrap">
+      <div class="ep-heading">
+        <span class="ep-label">Selected Work</span>
+        <h2>My <span class="ep-gradient">Portfolio</span></h2>
+        <p>
+          A showcase of the types of digital projects I can create
+          across web development, advertising and graphic design.
+        </p>
+      </div>
+
+      <div class="ep-projects">
+        <article class="ep-project">
+          <div class="ep-project-art website">
+            <div class="ep-mock">
+              <div class="ep-mock-bar">
+                <span>YOUR BRAND</span><span>MENU ☰</span>
+              </div>
+              <div class="ep-mock-hero">
+                <strong>Build Your Digital Presence</strong>
+                <small>Professional websites for modern businesses.</small><br>
+                <span class="ep-mock-btn">Explore Services ↗</span>
+              </div>
+            </div>
+          </div>
+          <div class="ep-project-body">
+            <span class="ep-tag">WEB DEVELOPMENT</span>
+            <h3>Business Website Design</h3>
+            <p>
+              A website concept focused on presenting services,
+              building trust and making it easier for customers
+              to contact a business.
+            </p>
+          </div>
+        </article>
+
+        <article class="ep-project">
+          <div class="ep-project-art ads">
+            <div class="ep-ad-mock">
+              <small>AD CAMPAIGN CONCEPT</small>
+              <strong>Reach More.<br>Grow Smarter.</strong>
+              <small>Connect with your ideal audience.</small>
+              <div class="ep-ad-btn">LEARN MORE ↗</div>
+            </div>
+          </div>
+          <div class="ep-project-body">
+            <span class="ep-tag">DIGITAL ADVERTISING</span>
+            <h3>Meta & Google Ads</h3>
+            <p>
+              An advertising creative concept designed to communicate
+              a clear offer, attract relevant audiences and encourage
+              potential customers to take action.
+            </p>
+          </div>
+        </article>
+
+        <article class="ep-project">
+          <div class="ep-project-art design">
+            <div class="ep-design-mock">
+              <div class="ep-design-tile">BRAND<br>YOUR WAY</div>
+              <div class="ep-design-tile">CREATE.</div>
+              <div class="ep-design-tile">SOCIAL<br>MEDIA</div>
+              <div class="ep-design-tile">STAND<br>OUT.</div>
+            </div>
+          </div>
+          <div class="ep-project-body">
+            <span class="ep-tag">GRAPHIC DESIGN</span>
+            <h3>Social Media Creatives</h3>
+            <p>
+              A visual design concept for promotional content,
+              brand communication and social media marketing.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <p class="ep-note">
+        Note: These are illustrative portfolio concepts. Replace
+        them with screenshots and links to your actual projects.
+      </p>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="ep-section" id="ep-about">
+    <div class="ep-wrap ep-about-grid">
+      <div class="ep-about-art">
+        <div class="ep-about-card">
+          <div class="ep-about-mark">EX.</div>
+          <h3>Creative Thinking.<br>Digital Solutions.</h3>
+          <p>
+            Websites · Paid Ads · Graphic Design
+          </p>
+          <div class="ep-mini-grid">
+            <div class="ep-mini">
+              <div class="ep-mini-icon">💡</div>
+              <strong>Creative Ideas</strong>
+            </div>
+            <div class="ep-mini">
+              <div class="ep-mini-icon">🎯</div>
+              <strong>Business Goals</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ep-about">
+        <span class="ep-label">About Me</span>
+        <h2>Helping Brands Build a Strong <span class="ep-gradient">Digital Identity.</span></h2>
+        <p>
+          I am a digital service professional at ElianX Digital,
+          passionate about creating websites, designing marketing
+          creatives and helping businesses reach their audiences
+          through online advertising.
+        </p>
+        <p style="margin-top:14px;">
+          My goal is to understand each business's needs and
+          provide digital solutions that communicate its value
+          clearly and professionally.
+        </p>
+        <div class="ep-checks">
+          <div class="ep-check">✓ Website Solutions</div>
+          <div class="ep-check">✓ Meta Advertising</div>
+          <div class="ep-check">✓ Google Advertising</div>
+          <div class="ep-check">✓ Creative Designs</div>
+        </div>
+        <a href="#ep-contact" class="ep-btn">Work With Me ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="ep-contact" id="ep-contact">
+    <div class="ep-wrap">
+      <span class="ep-label">Let's Work Together</span>
+      <h2>Have a Project in Mind? Let's Build Something Great.</h2>
+      <p>
+        Need a website, advertising campaign or creative design
+        for your business? Get in touch and let's discuss your
+        project and goals.
+      </p>
+      <a class="ep-btn"
+         href="https://wa.me/919034545850"
+         target="_blank" rel="noopener">
+        Chat on WhatsApp ↗
+      </a>
+
+      <div class="ep-contact-info">
+        <span>✉ elianxdigital@gmail.com</span>
+        <span>☎ +91 9034545850</span>
+        <span>📍 Kaithal, Haryana, India</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="ep-footer">
+    <div class="ep-wrap ep-footer-inner">
+      <a href="#ep-home" class="ep-logo">ElianX<span>.</span> Digital</a>
+      <small>Web Development · Meta Ads · Google Ads · Graphic Design</small>
+      <small>© <span id="ep-year">2026</span> ElianX Digital. All rights reserved.</small>
+    </div>
+  </footer>
+
+</div>
+
